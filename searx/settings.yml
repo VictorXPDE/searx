@@ -1,6 +1,6 @@
 general:
     debug : False # Debug mode, only for development
-    instance_name : "searx" # displayed name
+    instance_name : "victorxpde searx" # displayed name
     contact_url: False # mailto:contact@example.com
     enable_stats: False # activate /stats page - note: it may leak usage data
 
@@ -15,19 +15,19 @@ brand:
 
 search:
     safe_search : 0 # Filter results. 0: None, 1: Moderate, 2: Strict
-    autocomplete : "" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off by default
-    default_lang : "" # Default search language - leave blank to detect from browser information or use codes from 'languages.py'
+    autocomplete : "google" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off by default
+    default_lang : "pt-BR" # Default search language - leave blank to detect from browser information or use codes from 'languages.py'
     ban_time_on_fail : 5 # ban time in seconds after engine errors
     max_ban_time_on_fail : 120 # max ban time in seconds after engine errors
     prefer_configured_language: False # increase weight of results in confiugred language in ranking
 
 server:
     port : 8888
-    bind_address : "127.0.0.1" # address to listen on
-    secret_key : "ultrasecretkey" # change this!
+    bind_address : "0.0.0.0" # address to listen on
+    secret_key : "982def84bf3feb41ba587b3e66a4c34b" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
-    http_protocol_version : "1.0"  # 1.0 and 1.1 are supported
+    http_protocol_version : "1.1"  # 1.0 and 1.1 are supported
     method: "POST" # POST queries are more secure as they don't show up in history but may cause problems when using Firefox containers
     default_http_headers:
         X-Content-Type-Options : nosniff
@@ -42,9 +42,9 @@ ui:
     static_path : "" # Custom static path - leave it blank if you didn't change
     templates_path : "" # Custom templates path - leave it blank if you didn't change
     default_theme : oscar # ui theme
-    default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
+    default_locale : "pt_BR" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
     theme_args :
-        oscar_style : logicodev # default style of oscar
+        oscar_style : logicodev-dark # default style of oscar
 #   results_on_new_tab: False  # Open result links in a new tab by default
 #   categories_order :
 #     - general
@@ -342,6 +342,7 @@ engines:
     engine : deviantart
     shortcut : da
     timeout : 3.0
+    disabled : True
 
   - name : ddg definitions
     engine : duckduckgo_definitions
@@ -411,13 +412,11 @@ engines:
   - name : duckduckgo
     engine : duckduckgo
     shortcut : ddg
-    disabled : True
 
   - name : duckduckgo images
     engine : duckduckgo_images
     shortcut : ddi
     timeout: 3.0
-    disabled : True
 
   - name : tineye
     engine : tineye
