@@ -15,6 +15,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tooling box searx_extra for developers and users" href="../searx_extra/index.html" />
@@ -58,7 +59,7 @@ documentation, with the builders from the <a class="reference external" href="ht
 generated and deployed at <a class="reference external" href="https://searx.github.io/searx/.">github.io</a>.  For build prerequisites read
 <a class="reference internal" href="../admin/buildhosts.html#docs-build"><span class="std std-ref">Build docs</span></a>.</p>
 <p>The source files of Searx’s documentation are located at <a class="reference external" href="https://github.com/searx/searx/blob/master/docs">Origin: docs</a>.  Sphinx
-assumes source files to be encoded in UTF-8 by defaul.  Run <a class="reference internal" href="contribution_guide.html#make-docs-live"><span class="std std-ref">make docs.live</span></a> to build HTML while editing.</p>
+assumes source files to be encoded in UTF-8 by default.  Run <a class="reference internal" href="contribution_guide.html#make-docs-live"><span class="std std-ref">make docs.live</span></a> to build HTML while editing.</p>
 <aside class="sidebar">
 <p class="sidebar-title">Further reading</p>
 <ul class="simple">
@@ -193,7 +194,7 @@ conditions</em> and all the side effects a external developer will not know.</p>
 backquotes appear in running text and could be confused with inline markup
 delimiters, they have to be escaped with a backslash (<code class="docutils literal notranslate"><span class="pre">\*pointer</span></code>).</p>
 <table class="docutils align-default" id="id4">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">basic inline markup</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">basic inline markup</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 21%" />
@@ -318,13 +319,13 @@ To refer a point in the documentation a anchor is needed ...
 </pre></div>
 </div>
 <p>To refer anchors use the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref">ref role</a> markup:</p>
-<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span>Visit chapter <span class="na">:ref:</span><span class="nv">`reST anchor`</span>.  Or set hyperlink text manualy :ref:`foo
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span>Visit chapter <span class="na">:ref:</span><span class="nv">`reST anchor`</span>.  Or set hyperlink text manually :ref:`foo
 bar &lt;reST anchor&gt;`.
 </pre></div>
 </div>
 <div class="rst-example admonition">
 <p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">:ref:</span></code> role</p>
-<p>Visist chapter <a class="reference internal" href="#rest-anchor"><span class="std std-ref">Anchors</span></a>.  Or set hyperlink text manualy <a class="reference internal" href="#rest-anchor"><span class="std std-ref">foo
+<p>Visist chapter <a class="reference internal" href="#rest-anchor"><span class="std std-ref">Anchors</span></a>.  Or set hyperlink text manually <a class="reference internal" href="#rest-anchor"><span class="std std-ref">foo
 bar</span></a>.</p>
 </div>
 </section>
@@ -356,7 +357,7 @@ Lists</a>.</p>
 <p>With the power of <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html">sphinx.ext.extlinks</a> and <a class="reference external" href="https://www.sphinx-doc.org/en/stable/ext/intersphinx.html">intersphinx</a> referencing external
 content becomes smart.</p>
 <table class="docutils align-default" id="id5">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">smart refs with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html">sphinx.ext.extlinks</a> and <a class="reference external" href="https://www.sphinx-doc.org/en/stable/ext/intersphinx.html">intersphinx</a></span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">smart refs with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html">sphinx.ext.extlinks</a> and <a class="reference external" href="https://www.sphinx-doc.org/en/stable/ext/intersphinx.html">intersphinx</a></span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 21%" />
@@ -563,7 +564,7 @@ in a specific way.</p>
 </pre></div>
 </div>
 <table class="docutils align-default" id="id6">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">smart refs with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html">sphinx.ext.extlinks</a> and <a class="reference external" href="https://www.sphinx-doc.org/en/stable/ext/intersphinx.html">intersphinx</a></span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">smart refs with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html">sphinx.ext.extlinks</a> and <a class="reference external" href="https://www.sphinx-doc.org/en/stable/ext/intersphinx.html">intersphinx</a></span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 21%" />
@@ -639,15 +640,15 @@ in a specific way.</p>
 is flexible.  To get best results in the generated output format, install
 <a class="reference external" href="https://www.imagemagick.org">ImageMagick</a> and <a class="reference external" href="https://graphviz.gitlab.io">Graphviz</a>.</p>
 </aside>
-<p>Searx’s sphinx setup includes: <a class="reference external" href="https://return42.github.io/linuxdoc/linuxdoc-howto/kfigure.html#kfigure" title="(in LinuxDoc v20210324)"><span>Scalable figure and image handling</span></a>.  Scaleable here means;
-scaleable in sense of the build process.  Normally in absence of a converter
+<p>Searx’s sphinx setup includes: <a class="reference external" href="https://return42.github.io/linuxdoc/linuxdoc-howto/kfigure.html#kfigure" title="(in LinuxDoc v20210324)"><span>Scalable figure and image handling</span></a>.  Scalable here means;
+scalable in sense of the build process.  Normally in absence of a converter
 tool, the build process will break.  From the authors POV it’s annoying to care
 about the build process when handling with images, especially since he has no
 access to the build process.  With <a class="reference external" href="https://return42.github.io/linuxdoc/linuxdoc-howto/kfigure.html#kfigure" title="(in LinuxDoc v20210324)"><span>Scalable figure and image handling</span></a> the build process
 continues and scales output quality in dependence of installed image processors.</p>
 <p>If you want to add an image, you should use the <code class="docutils literal notranslate"><span class="pre">kernel-figure</span></code> (inheritance
 of <a class="reference external" href="https://docutils.sourceforge.net/docs/ref/rst/directives.html#figure">figure</a>) and <code class="docutils literal notranslate"><span class="pre">kernel-image</span></code> (inheritance of <a class="reference external" href="https://docutils.sourceforge.net/docs/ref/rst/directives.html#image">image</a>)
-directives.  E.g. to insert a figure with a scaleable image format use SVG
+directives.  E.g. to insert a figure with a scalable image format use SVG
 (<a class="reference internal" href="#svg-image-example"><span class="std std-ref">Simple SVG image.</span></a>):</p>
 <div class="highlight-reST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_svg image example:</span>
 
@@ -1110,7 +1111,7 @@ your table need some metadata (e.g. a title) you need to add the <code class="do
 <div class="rst-example admonition">
 <p class="admonition-title">Simple ASCII table</p>
 <table class="docutils align-left" id="id11">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">foo gate truth table</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">foo gate truth table</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -1165,7 +1166,7 @@ your table need some metadata (e.g. a title) you need to add the <code class="do
 <div class="rst-example admonition">
 <p class="admonition-title">ASCII grid table</p>
 <table class="docutils align-default" id="id12">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">grid table example</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">grid table example</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1286,7 +1287,7 @@ and <em>targets</em> (e.g. a ref to <a class="reference internal" href="#row-bod
      <span class="m">-</span> cell 4.4
 
    <span class="m">*</span> - row 5
-     <span class="m">-</span> cell 5.1 with automatic span to rigth end
+     <span class="m">-</span> cell 5.1 with automatic span to right end
 
    <span class="m">*</span> - row 6
      <span class="m">-</span> cell 6.1
@@ -1296,7 +1297,7 @@ and <em>targets</em> (e.g. a ref to <a class="reference internal" href="#row-bod
 <div class="rst-example admonition">
 <p class="admonition-title">List table</p>
 <table class="docutils align-default" id="id13">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flat-table</span></code> example</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 9 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flat-table</span></code> example</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head stub" rowspan="2"><p> head / stub</p></th>
 <th class="head" colspan="4"><p> head 1.1-4</p></th>
@@ -1336,7 +1337,7 @@ cell 2.3 with a span over</p>
 <td><p>cell 4.4</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>row 5</p></th>
-<td colspan="4"><p>cell 5.1 with automatic span to rigth end</p></td>
+<td colspan="4"><p>cell 5.1 with automatic span to right end</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p>row 6</p></th>
 <td><p>cell 6.1</p></td>
@@ -1369,7 +1370,7 @@ stub col row 1, column, column
 <div class="rst-example admonition">
 <p class="admonition-title">CSV table</p>
 <table class="docutils align-default" id="id14">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">CSV table example</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">CSV table example</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 38%" />
@@ -1451,6 +1452,64 @@ time.  The <a class="reference external" href="https://github.com/tardyp/sphinx-
         <span class="m">-</span> {{(mod.display_error_messages and &quot;y&quot;) or &quot;&quot;}}
 
      {% endfor %}
+
+<span class="p">   ..</span> <span class="ow">flat-table</span><span class="p">::</span> Additional engines (commented out in settings.yml)
+      <span class="nc">:header-rows:</span> 1
+      <span class="nc">:stub-columns:</span> 2
+
+      <span class="m">*</span> - Name
+        <span class="m">-</span> Base URL
+        <span class="m">-</span> Host
+        <span class="m">-</span> Port
+        <span class="m">-</span> Paging
+
+      <span class="m">*</span> - elasticsearch
+        <span class="m">-</span> localhost:9200
+        - 
+        - 
+        <span class="m">-</span> False
+
+      <span class="m">*</span> - meilicsearch
+        <span class="m">-</span> localhost:7700
+        - 
+        - 
+        <span class="m">-</span> True
+
+      <span class="m">*</span> - mongodb
+        - 
+        <span class="m">-</span> 127.0.0.1
+        <span class="m">-</span> 21017
+        <span class="m">-</span> True
+
+      <span class="m">*</span> - mysql_server
+        - 
+        <span class="m">-</span> 127.0.0.1
+        <span class="m">-</span> 3306
+        <span class="m">-</span> True
+
+      <span class="m">*</span> - postgresql
+        - 
+        <span class="m">-</span> 127.0.0.1
+        <span class="m">-</span> 5432
+        <span class="m">-</span> True
+
+      <span class="m">*</span> - redis_server
+        - 
+        <span class="m">-</span> 127.0.0.1
+        <span class="m">-</span> 6379
+        <span class="m">-</span> False
+
+      <span class="m">*</span> - solr
+        <span class="m">-</span> localhost:8983
+        - 
+        - 
+        <span class="m">-</span> True
+
+      <span class="m">*</span> - sqlite
+        - 
+        - 
+        - 
+        <span class="m">-</span> True
 </pre></div>
 </div>
 <p>The context for the template is selected in the line <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">jinja::</span> <span class="pre">searx</span></code>.  In
@@ -1608,7 +1667,7 @@ gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
   
     <div class="footer" role="contentinfo">
         &#169; Copyright 2015-2022, Adam Tauber, Noémi Ványi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.2.
     </div>
   <script src="../_static/version_warning_offset.js"></script>
 

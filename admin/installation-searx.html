@@ -15,6 +15,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/tabs.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -230,7 +231,7 @@ $ sudo -H sed -i -e <span class="s2">&quot;s/{instance_name}/searx@</span><span 
 <span class="w">    </span><span class="nt">default_lang </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pt-BR&quot;</span><span class="w"> </span><span class="c1"># Default search language - leave blank to detect from browser information or use codes from &#39;languages.py&#39;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">ban_time_on_fail </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"> </span><span class="c1"># ban time in seconds after engine errors</span><span class="w"></span>
 <span class="w">    </span><span class="nt">max_ban_time_on_fail </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span><span class="w"> </span><span class="c1"># max ban time in seconds after engine errors</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prefer_configured_language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"> </span><span class="c1"># increase weight of results in confiugred language in ranking</span><span class="w"></span>
+<span class="w">    </span><span class="nt">prefer_configured_language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"> </span><span class="c1"># increase weight of results in configured language in ranking</span><span class="w"></span>
 
 <span class="nt">server</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">port </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8888</span><span class="w"></span>
@@ -284,7 +285,7 @@ $ sudo -H sed -i -e <span class="s2">&quot;s/{instance_name}/searx@</span><span 
 <span class="nt">outgoing</span><span class="p">:</span><span class="w"> </span><span class="c1"># communication with search engines</span><span class="w"></span>
 <span class="w">    </span><span class="nt">request_timeout </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span><span class="w"> </span><span class="c1"># default timeout in seconds, can be override by engine</span><span class="w"></span>
 <span class="w">    </span><span class="c1"># max_request_timeout: 10.0 # the maximum timeout in seconds</span><span class="w"></span>
-<span class="w">    </span><span class="nt">useragent_suffix </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="c1"># suffix of searx_useragent, could contain informations like an email address to the administrator</span><span class="w"></span>
+<span class="w">    </span><span class="nt">useragent_suffix </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="c1"># suffix of searx_useragent, could contain information like an email address to the administrator</span><span class="w"></span>
 <span class="w">    </span><span class="nt">pool_connections </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"> </span><span class="c1"># Number of different hosts</span><span class="w"></span>
 <span class="w">    </span><span class="nt">pool_maxsize </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"> </span><span class="c1"># Number of simultaneous requests by host</span><span class="w"></span>
 <span class="c1"># uncomment below section if you want to use a proxy</span><span class="w"></span>
@@ -950,6 +951,13 @@ $ sudo -H sed -i -e <span class="s2">&quot;s/{instance_name}/searx@</span><span 
 <span class="w">    </span><span class="nt">shortcut</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iv</span><span class="w"></span>
 <span class="w">    </span><span class="nt">timeout </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span><span class="w"></span>
 <span class="w">    </span><span class="nt">disabled </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ipfs search</span><span class="w"></span>
+<span class="w">    </span><span class="nt">engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ipfs_search</span><span class="w"></span>
+<span class="w">    </span><span class="nt">shortcut</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ipfs</span><span class="w"></span>
+<span class="w">    </span><span class="nt">paging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">disabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
 
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kickass</span><span class="w"></span>
 <span class="w">    </span><span class="nt">engine </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kickass</span><span class="w"></span>
@@ -1864,7 +1872,7 @@ $ sudo -H sed -i -e <span class="s2">&quot;s/{instance_name}/searx@</span><span 
 <span class="w">    </span><span class="nt">paging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 <span class="w">    </span><span class="nt">first_page_num</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
 <span class="w">    </span><span class="nt">search_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://search.brave.com/search?q={query}&amp;offset={pageno}&amp;spellcheck=1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">url_xpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">//div[@class=&quot;snippet fdb&quot;]/a/@href</span><span class="w"></span>
+<span class="w">    </span><span class="nt">url_xpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">//a[@class=&quot;result-header&quot;]/@href</span><span class="w"></span>
 <span class="w">    </span><span class="nt">title_xpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">//span[@class=&quot;snippet-title&quot;]</span><span class="w"></span>
 <span class="w">    </span><span class="nt">content_xpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">//p[1][@class=&quot;snippet-description&quot;]</span><span class="w"></span>
 <span class="w">    </span><span class="nt">suggestion_xpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">//div[@class=&quot;text-gray h6&quot;]/a</span><span class="w"></span>
@@ -1886,6 +1894,15 @@ $ sudo -H sed -i -e <span class="s2">&quot;s/{instance_name}/searx@</span><span 
 <span class="w">      </span><span class="nt">use_official_api</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">      </span><span class="nt">require_api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">      </span><span class="nt">results</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTML</span><span class="w"></span>
+
+<span class="c1"># omnom engine - see https://github.com/asciimoo/omnom for more details</span><span class="w"></span>
+<span class="c1">#  - name : omnom</span><span class="w"></span>
+<span class="c1">#    engine : omnom</span><span class="w"></span>
+<span class="c1">#    paging : True</span><span class="w"></span>
+<span class="c1">#    base_url : &#39;http://your.omnom.host/&#39;</span><span class="w"></span>
+<span class="c1">#    enable_http : True</span><span class="w"></span>
+<span class="c1">#    categories : general</span><span class="w"></span>
+<span class="c1">#    shortcut : om</span><span class="w"></span>
 
 <span class="c1"># Doku engine lets you access to any Doku wiki instance:</span><span class="w"></span>
 <span class="c1"># A public one or a private/corporate one.</span><span class="w"></span>
@@ -2133,7 +2150,7 @@ command twice).  At this point searx is not demonized; uwsgi allows this.</p>
   
     <div class="footer" role="contentinfo">
         &#169; Copyright 2015-2022, Adam Tauber, Noémi Ványi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.2.
     </div>
   <script src="../_static/version_warning_offset.js"></script>
 
